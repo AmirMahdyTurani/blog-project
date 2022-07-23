@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Blog{% endblock %}
+
+{% block header_refrences %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/master.jpg' %}" alt="AmirMahdyTurani - Author Of This Blog">
+            <h2>Blog Project</h2>
+        </header>
+        <p>Hi, My name is AmirMahdy Turani, I am a programer</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>Latest Posts</h2>
+        <ul>
+            {% for post in latest_posts %}
+                {% include 'blog/includes/post.html'%}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, autem esse eum numquam officia quaerat quos
+            vitae. Accusamus architecto autem dicta, dolorem doloremque ea eos error est illum in iste minus nobis
+            obcaecati optio quaerat, quas ratione repellendus repudiandae vero.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda facere, maiores repellat
+            sapiente sequi. Amet at consequuntur, cumque dignissimos id molestias obcaecati, quaerat quasi ratione,
+            repellat repellendus soluta tenetur voluptates. Aliquid dolorem dolores doloribus, id in nesciunt porro
+            sapiente. Ab accusantium aspernatur corporis cupiditate dicta fugiat illo libero, magni neque quia quibusdam
+            voluptatem? Aut ipsam necessitatibus non quidem totam?
+        </p>
+    </section>
+{% endblock %}

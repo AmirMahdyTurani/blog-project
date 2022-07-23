@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #E7F6F2;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+}
